@@ -1,0 +1,239 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* My CSS */
+body {
+    font-family: 'Maison Neue';
+}
+
+header {
+    height: 85px;
+}
+
+ul {
+    list-style: none;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.company {
+    font-family: 'Maison Neue Extended';
+    font-size: 30px;
+}
+
+.company span {
+    color: #D50000;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    font-size: 22px;
+}
+
+nav {
+    height: 52px;
+}
+
+.navigateMain {
+    width: 115px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #D50000;
+    border: #ececec solid 2px;
+}
+
+.navigate {
+    width: 85px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: white;
+    border: #ececec solid 2px;
+}
+
+.navigateMain a {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+.navigate a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.navbarMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 150px;
+    margin-top: 10px;
+}
+
+.locompany {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menus {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.menus li:first-child {
+    margin-right: 40px;
+}
+
+.navbarHome {
+    display: flex;
+    margin: 0px 150px;
+    margin-top: 5px;
+}
+
+.navbarHome li {
+    margin-right: 15px;
+}
+
+nav {
+    border: solid #ececec 2px;
+}

@@ -1,0 +1,73 @@
+.banner1 {
+    height: 570px;
+    width: 100%;
+    position: relative;
+}
+
+.bubble {
+    width: 50%;
+    height: 550px;
+    background-color: #D50000;
+    border-radius: 0 300px 300px 0;
+}
+
+.bubbledesc {
+    width: 80%;
+    padding-top: 115px;
+    padding-left: 80px;
+}
+
+.bubble h1 {
+    font-size: 45px;
+    color: white;
+    padding-bottom: 20px;
+    line-height: 55px;
+}
+
+.bubble h3 {
+    font-size: 25px;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.bubble h2 {
+    font-family: 'Maison Neue Extended';
+    font-size: 32px;
+    font-style: oblique;
+    color: #FFBD22;
+}
+
+.banner1 img {
+    height: 550px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bubblesmall {
+    height: 90px;
+    width: 180px;
+    background-color: #FFBD22;
+    position: absolute;
+    bottom: 20px;
+    left: 450px;
+    border-radius: 100px 100px 0 0;
+}
+
+.one {
+    width: 100%;
+}
+
+.footerAngkutaja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: #101820;
+}
+
+.footerAngkutaja p {
+    color: white;
+}
