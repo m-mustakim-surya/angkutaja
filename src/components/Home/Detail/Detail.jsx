@@ -1,9 +1,16 @@
 import React from 'react'
+import { useLazyQuery, useQuery } from '@apollo/client';
+import { GetOrders, GetOrderById } from "../../../config/query"
 import Footer from '../../Footer/Footer'
 import Navbar from '../../Navbar/Navbar'
 import './Detail.css'
 
-const Detail = () => {
+const Detail = ({ deleteOrder, onClickEdit }) => {
+  const { data } = useQuery(GetOrders);
+
+  const { data: orderByIdData } = useLazyQuery(GetOrderById);
+  
+
   return (
     <div>
       <Navbar />
@@ -23,24 +30,46 @@ const Detail = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>M. Mustakim Surya</td>
-            <td>Satu kendaraan</td>
-            <td>Mobil L300 Bak</td>
-            <td>30 km</td>
-            <td className='harga'>Rp.300.000</td>
-            <td>Edit</td>
-            <td>Delete</td>
-          </tr>
-          <tr>
-            <td>Reza Icikiwir</td>
-            <td>Muat sebagian</td>
-            <td>Mobil Pickup</td>
-            <td>15 km</td>
-            <td className='harga'>Rp.50.000</td>
-            <td>Edit</td>
-            <td>Delete</td>
-          </tr>
+          {orderByIdData ? orderByIdData.miniproject_detail?.map(({ order_id, user_name, jenis_angkut, jenis_mobil, jarak, harga }) => (
+            <tr key={order_id}>
+              <td>{user_name}</td>
+              <td>{jenis_angkut}</td>
+              <td>{jenis_mobil}</td>
+              <td>{jarak} km</td>
+              <td className='harga'>Rp.{harga}</td>
+              <td
+                onClick={() => onClickEdit({order_id, user_name, jenis_angkut, jenis_mobil, jarak, harga})}
+                >
+                  <button>Edit</button>
+              </td>
+              <td
+                onClick={() => deleteOrder(order_id)}
+                >
+                  <button>Delete</button>
+              </td>
+            </tr>
+
+          )
+          ) : data.miniproject_detail.map(({ order_id, user_name, jenis_angkut, jenis_mobil, jarak, harga }) => (
+            <tr key={order_id}>
+              <td>{user_name}</td>
+              <td>{jenis_angkut}</td>
+              <td>{jenis_mobil}</td>
+              <td>{jarak} km</td>
+              <td className='harga'>Rp.{harga}</td>
+              <td
+                onClick={() => onClickEdit({order_id, user_name, jenis_angkut, jenis_mobil, jarak, harga})}
+                >
+                  <button>Edit</button>
+              </td>
+              <td
+                onClick={() => deleteOrder(order_id)}
+                >
+                  <button>Delete</button>
+              </td>
+            </tr>
+          )
+          )}
         </tbody>
       </table>
       <Footer />
