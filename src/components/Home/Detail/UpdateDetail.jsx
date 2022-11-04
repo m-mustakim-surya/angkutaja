@@ -101,11 +101,8 @@ function UpdateDetail(props) {
           name="harga"
           onChange={onChange}
         />
-        <p></p>
-        <button onClick={handleSubmit}>Update</button>
-        <button onClick={handleTutupInput} style={{ marginLeft: "10px" }}>
-          Selesai
-        </button>
+        <button onClick={handleSubmit} className='buttonSave'>Save</button>
+        <button onClick={handleTutupInput} className='buttonCancel'>Cancel</button>
       </div>
     </div>
   );

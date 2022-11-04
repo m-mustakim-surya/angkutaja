@@ -89,3 +89,38 @@ td:last-child {
     border-bottom-right-radius: 17px;
     border-top-right-radius: 17px;
 }
+
+input[type="text"],
+input[type="number"],
+select {
+    display: block;
+    border-radius: 15px;
+    height: 35px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: solid black 1px;
+    padding: 0 10px;
+}
+
+.buttonSave {
+    width: 120px;
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: #FFBD22;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.buttonCancel {
+    width: 120px;
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: #D50000;
+    font-size: 15px;
+    cursor: pointer;
+}

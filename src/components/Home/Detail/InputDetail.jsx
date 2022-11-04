@@ -5,8 +5,8 @@ function InputDetail(props) {
     user_name: "",
     jenis_angkut: "",
     jenis_mobil: "",
-    jarak: "",
-    harga: "",
+    jarak: "0",
+    harga: "0",
     inputing: true,
   })
 
@@ -33,8 +33,8 @@ function InputDetail(props) {
         user_name: "",
         jenis_angkut: "",
         jenis_mobil: "",
-        jarak: "",
-        harga: ""
+        jarak: "0",
+        harga: "0"
       })
     } else {
       alert("Lengkapi data terlebih dahulu!")
