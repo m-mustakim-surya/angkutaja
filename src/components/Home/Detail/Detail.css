@@ -9,18 +9,18 @@ h1 {
 }
 
 table {
-    margin-left: 150px;
+    margin-left: 120px;
     width: 80%;
 }
 
 table th {
     font-family: 'Maison Neue Extended';
     text-align: left;
-    padding-bottom: 30px;
+    padding: 10px 25px 20px 25px
 }
 
 table td {
-    padding-bottom: 20px;
+    padding: 10px 25px;
 }
 
 table .harga {
@@ -35,13 +35,57 @@ td button img {
 .editButton {
     background-color: #FFBD22;
     border: 0;
-    border-radius: 25%;
+    border-radius: 25% 0 0 25%;
     cursor: pointer;
+}
+
+.editButton:hover {
+    background-color: #e9ac1f;
 }
 
 .deleteButton {
     background-color: #FF0000;
     border: 0;
-    border-radius: 25%;
+    border-radius: 0 25% 25% 0;
     cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: #ec0202;
+}
+
+.warn {
+    display: block;
+    margin: auto;
+    margin-top: 120px;
+}
+
+img.warn {
+    width: 120px;
+}
+
+table .rowdetail:hover {
+    background-color: #ececec;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+table {
+    border-collapse: separate;
+}
+
+td {
+    border-style: solid none;
+}
+
+td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+}
+
+td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 17px;
+    border-top-right-radius: 17px;
 }

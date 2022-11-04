@@ -1,59 +1,95 @@
-import { useLazyQuery, useQuery } from '@apollo/client';
-import { useState } from 'react';
-import { GetOrders } from "../../../config/query"
+import { useMutation } from "@apollo/client"
+import { createDetail, deleteDetailById, GetDetails, updateDetailById } from "../../../config/query";
+import { useState } from "react";
 import Footer from '../../Footer/Footer';
 import Navbar from '../../Navbar/Navbar';
-import imgedit from '../../../img/edit.png';
-import imgdelete from '../../../img/delete.png';
+// import InputDetail from './InputDetail';
+import ListDetail from './ListDetail';
+import UpdateDetail from './UpdateDetail';
 import './Detail.css';
 
-const Detail = ({ deleteOrder, editOrder }) => {
-    const { data, loading, error, refetch } = useQuery(GetOrders);
+const Detail = () => {
+  const [insertDetail] = useMutation(createDetail, { refetchQueries: [{ query: GetDetails }] })
+  const [deleteDetail] = useMutation(deleteDetailById, { refetchQueries: [{ query: GetDetails }] })
+  const [updateDetail] = useMutation(updateDetailById, { refetchQueries: [{ query: GetDetails }] })
 
-    const [passengerId, setPassengerId] = useState("")
+  const removeDetail = order_ids => {
+      deleteDetail({
+          variables: {
+              order_id: order_ids,
+          },
+      });
+  };
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
-    return (
-        <div>
-          <Navbar />
-          <div className='detail'>
-            <h1>Detail Order</h1>
-          </div>
-          <table>
-              <thead>
-                <tr>
-                  <th>Nama</th>
-                  <th>Jenis angkut</th>
-                  <th>Jenis mobil</th>
-                  <th>Total jarak</th>
-                  <th>Harga</th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.miniproject_detail.map(({ order_id, user_name, jenis_angkut, jenis_mobil, jarak, harga }) => (
-                    <tr key={order_id}>
-                        <td>{user_name}</td>
-                        <td>{jenis_angkut}</td>
-                        <td>{jenis_mobil}</td>
-                        <td>{jarak} km</td>
-                        <td className='harga'>Rp.{harga}</td>
-                        <td onClick={() => editOrder({order_id, user_name, jenis_angkut, jenis_mobil, jarak, harga})}>
-                          <button className='editButton'><img src={imgedit} alt="edit button" /></button>
-                        </td>
-                        <td onClick={() => deleteOrder(order_id)}>
-                          <button className='deleteButton'><img src={imgdelete} alt="delete button" /></button>
-                        </td>
-                    </tr>
-                )
-                )}
-              </tbody>
-          </table>
-          <Footer />
-        </div>
-    )
+  const tambahDetail = newUser => {
+      const newData = {
+          ...newUser,
+      };
+      insertDetail({
+          variables: {
+              user_name: newData.user_name,
+              jenis_angkut: newData.jenis_angkut,
+              jenis_mobil: newData.jenis_mobil,
+              jarak: newData.jarak,
+              harga: newData.harga
+          },
+      });
+  };
+
+  const [edit, setEdit] = useState({
+      order_id: "",
+      user_name: "",
+      jenis_angkut: "",
+      jenis_mobil: "",
+      jarak: "",
+      harga: ""
+  });
+
+  const onClickEdit = (data) => {
+      setEdit({
+          order_id: data.order_id,
+          user_name: data.user_name,
+          jenis_angkut: data.jenis_angkut,
+          jenis_mobil: data.jenis_mobil,
+          jarak: data.jarak,
+          harga: data.harga
+      });
+  };
+
+  const editDetail = updateUser => {
+      const editData = {
+          ...updateUser,
+      };
+      updateDetail({
+          variables: {
+              order_id: editData.order_id,
+              user_name: editData.user_name,
+              jenis_angkut: editData.jenis_angkut,
+              jenis_mobil: editData.jenis_mobil,
+              jarak: editData.jarak,
+              harga: editData.harga
+          },
+      });
+  }
+
+  return (
+    <div>
+      <Navbar />
+      <div className='detail'>
+        <h1>Detail Order</h1>
+      </div>
+      <ListDetail 
+        hapusDetail={removeDetail}
+        editDetail={editDetail}
+        onClickEdit={onClickEdit}
+      />
+      {/* <InputDetail 
+        tambahDetail={tambahDetail}
+      /> */}
+      <UpdateDetail  edit={edit} editDetail={editDetail} />
+      {/* <Footer /> */}
+    </div>
+  )
 }
 
 export default Detail;

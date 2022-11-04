@@ -17,6 +17,10 @@
     font-size: 22px;
 }
 
+.menubw a:hover {
+    color: #ababab;
+}
+
 .bgabout {
     position: absolute;
     width: 100%;
