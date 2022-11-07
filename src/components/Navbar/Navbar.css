@@ -167,6 +167,11 @@ ul {
     font-size: 22px;
 }
 
+.menu a:hover {
+    color: #ababab;
+    transition: 0.3s;
+}
+
 nav {
     height: 52px;
 }
@@ -197,6 +202,16 @@ nav {
     text-decoration: none;
     color: black;
     font-size: 17px;
+}
+
+.navigateMain:hover {
+    background-color: #bb0101;
+    transition: 0.5s;
+}
+
+.navigate:hover {
+    background-color: #d1d1d1;
+    transition: 0.5s;
 }
 
 .navbarMenu {

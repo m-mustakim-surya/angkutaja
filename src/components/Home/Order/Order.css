@@ -68,4 +68,9 @@ textarea {
     background-color: #FFBD22;
     right: 30px;
     font-size: 15px;
+    cursor: pointer;
+}
+
+.buttonSubmit:hover {
+    background-color: #e9ac1f;
 }
