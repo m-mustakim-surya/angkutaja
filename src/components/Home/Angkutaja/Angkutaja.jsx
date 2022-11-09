@@ -38,7 +38,7 @@ const Angkutaja = () => {
             </div>
         </div>
         <div className='footerAngkutaja'>
-            <p>&copy; 2022 angkutaja.</p>
+            <p>&copy; 2022 angkutaja. M. Mustakim Surya</p>
         </div>
     </div>
   )
