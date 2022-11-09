@@ -271,3 +271,131 @@ nav {
 nav {
     border: solid #ececec 2px;
 }
+
+@media (max-width:425px) {
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+        background-color: white;
+        top: 0;
+        box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.2);
+    }
+
+    header {
+        height: 45px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .company {
+        font-family: 'Maison Neue Extended';
+        font-size: 20px;
+    }
+
+    .company span {
+        color: #D50000;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu {
+        font-size: 13px;
+    }
+
+    .menu a:hover {
+        color: #ababab;
+        transition: 0.3s;
+    }
+
+    nav {
+        height: 40px;
+    }
+
+    .navigateMain {
+        width: 70px;
+        height: 30px;
+        border-radius: 30px;
+        background-color: #D50000;
+        border: #ececec solid 2px;
+    }
+
+    .navigate {
+        width: 50px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: white;
+        border: #ececec solid 2px;
+    }
+
+    .navigateMain a {
+        font-size: 11px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navigate a {
+        text-decoration: none;
+        color: black;
+        font-size: 11px;
+    }
+
+    .navigateMain:hover {
+        background-color: #bb0101;
+        transition: 0.5s;
+    }
+
+    .navigate:hover {
+        background-color: #d1d1d1;
+        transition: 0.5s;
+    }
+
+    .navbarMenu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0px 20px;
+        margin-top: 10px;
+    }
+
+    .locompany {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .menus {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .menus li:first-child {
+        margin-right: 40px;
+    }
+
+    .navbarHome {
+        display: flex;
+        margin: 0px 10px;
+        margin-top: 5px;
+    }
+
+    .navbarHome li {
+        margin-right: 10px;
+    }
+
+    nav {
+        border: solid #ececec 2px;
+    }
+}

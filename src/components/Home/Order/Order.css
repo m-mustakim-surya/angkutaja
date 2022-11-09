@@ -80,3 +80,84 @@ textarea {
     background-color: #e9ac1f;
     transition: 0.3s;
 }
+
+@media (max-width:425px) {
+    .order {
+        margin-top: 120px;
+        margin-bottom: 80px;
+    }
+
+    h1 {
+        font-family: 'Maison Neue Extended';
+        font-size: 20px;
+        margin: 30px 0;
+    }
+
+    form {
+        width: 340px;
+        position: relative;
+        margin-left: 22px;
+    }
+
+    .tabInput {
+        display: inline-block;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+        display: block;
+        border-radius: 15px;
+        height: 35px;
+        width: 300px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: solid black 1px;
+        padding: 0 10px;
+    }
+
+    select {
+        height: 42px;
+    }
+
+    textarea {
+        height: 80px;
+        width: 300px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: solid black 1px;
+        border-radius: 20px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+
+    .tab3 img {
+        display: none;
+    }
+
+    .buttonSubmit {
+        position: absolute;
+        width: 120px;
+        height: 30px;
+        border: 0;
+        border-radius: 10px;
+        color: white;
+        margin-top: -30px;
+        background-color: #FFBD22;
+        right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        border: #ececec solid 2px;
+        margin-top: -2px;
+    }
+
+    .buttonSubmit:hover {
+        background-color: #e9ac1f;
+        transition: 0.3s;
+    }
+
+    .footer {
+        position: relative;
+    }
+}
