@@ -1,0 +1,401 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* My CSS */
+@font-face {
+    font-family: 'Maison Neue Extended';
+    src: url('../../assets/font/Maison\ Neue\ Extended\ Extra\ Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Maison Neue';
+    src: url('../../assets/font/MaisonNeue-Book.otf');
+}
+
+body {
+    font-family: 'Maison Neue';
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background-color: white;
+    top: 0;
+    box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.2);
+}
+
+header {
+    height: 85px;
+}
+
+ul {
+    list-style: none;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.company {
+    font-family: 'Maison Neue Extended';
+    font-size: 30px;
+}
+
+.company span {
+    color: #D50000;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    font-size: 22px;
+}
+
+.menu a:hover {
+    color: #ababab;
+    transition: 0.3s;
+}
+
+nav {
+    height: 52px;
+}
+
+.navigateMain {
+    width: 115px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #D50000;
+    border: #ececec solid 2px;
+}
+
+.navigate {
+    width: 85px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: white;
+    border: #ececec solid 2px;
+}
+
+.navigateMain a {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+.navigate a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.navigateMain:hover {
+    background-color: #bb0101;
+    transition: 0.5s;
+}
+
+.navigate:hover {
+    background-color: #d1d1d1;
+    transition: 0.5s;
+}
+
+.navbarMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 150px;
+    margin-top: 10px;
+}
+
+.locompany {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menus {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.menus li:first-child {
+    margin-right: 40px;
+}
+
+.navbarHome {
+    display: flex;
+    margin: 0px 150px;
+    margin-top: 5px;
+}
+
+.navbarHome li {
+    margin-right: 15px;
+}
+
+nav {
+    border: solid #ececec 2px;
+}
+
+@media (max-width:425px) {
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+        background-color: white;
+        top: 0;
+        box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.2);
+    }
+
+    header {
+        height: 45px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .company {
+        font-family: 'Maison Neue Extended';
+        font-size: 20px;
+    }
+
+    .company span {
+        color: #D50000;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu {
+        font-size: 13px;
+    }
+
+    .menu a:hover {
+        color: #ababab;
+        transition: 0.3s;
+    }
+
+    nav {
+        height: 40px;
+    }
+
+    .navigateMain {
+        width: 70px;
+        height: 30px;
+        border-radius: 30px;
+        background-color: #D50000;
+        border: #ececec solid 2px;
+    }
+
+    .navigate {
+        width: 50px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: white;
+        border: #ececec solid 2px;
+    }
+
+    .navigateMain a {
+        font-size: 11px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navigate a {
+        text-decoration: none;
+        color: black;
+        font-size: 11px;
+    }
+
+    .navigateMain:hover {
+        background-color: #bb0101;
+        transition: 0.5s;
+    }
+
+    .navigate:hover {
+        background-color: #d1d1d1;
+        transition: 0.5s;
+    }
+
+    .navbarMenu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0px 20px;
+        margin-top: 10px;
+    }
+
+    .locompany {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .menus {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .menus li:first-child {
+        margin-right: 40px;
+    }
+
+    .navbarHome {
+        display: flex;
+        margin: 0px 10px;
+        margin-top: 5px;
+    }
+
+    .navbarHome li {
+        margin-right: 10px;
+    }
+
+    nav {
+        border: solid #ececec 2px;
+    }
+}

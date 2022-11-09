@@ -1,0 +1,113 @@
+.companybw {
+    font-family: 'Maison Neue Extended';
+    font-size: 30px;
+    color: white;
+}
+
+.companybw span {
+    color: #FFBD22;
+}
+
+.menubw a {
+    text-decoration: none;
+    color: white;
+}
+
+.menubw {
+    font-size: 22px;
+}
+
+.menubw a:hover {
+    color: #ababab;
+}
+
+.bgabout {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: brightness(20%)
+}
+
+.desc {
+    margin-left: 70px;
+    margin-top: 70px;
+    width: 550px;
+}
+
+.titleAbout {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.desc p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 25px;
+}
+
+.desc p span {
+    color: #FFBD22;
+}
+
+@media (max-width:425px) {
+    .companybw {
+        font-family: 'Maison Neue Extended';
+        font-size: 20px;
+        color: white;
+    }
+
+    .companybw span {
+        color: #FFBD22;
+    }
+
+    .menubw a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .menubw {
+        font-size: 13px;
+    }
+
+    .menubw a:hover {
+        color: #ababab;
+    }
+
+    .bgabout {
+        display: none;
+    }
+
+    .about {
+        background-color: rgb(32, 32, 49);
+        margin-top: -10px;
+    }
+
+    .desc {
+        margin-left: 20px;
+        margin-top: 70px;
+        width: 80%;
+        margin-bottom: 120px;
+    }
+
+    .titleAbout {
+        color: white;
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .desc p {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 30px;
+        line-height: 25px;
+    }
+
+    .desc p span {
+        color: #FFBD22;
+    }
+}
