@@ -71,3 +71,20 @@ mutation updateOrderById($order_id: uuid, $user_name: String, $user_telepon: Str
   }
 }
 `;
+
+export const subscriptionOrder = gql`
+subscription subscriptionOrder {
+  angkutaja_order {
+    order_id
+    user_name
+    user_telepon
+    waktu
+    jenis_angkut
+    jenis_mobil
+    alamat_jemput
+    alamat_tujuan
+    jarak
+    harga
+  }
+}
+`

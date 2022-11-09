@@ -1,12 +1,12 @@
-import { useQuery } from '@apollo/client';
-import { GetOrders } from "../../../config/query"
+import { useSubscription } from '@apollo/client';
+import { subscriptionOrder } from "../../../config/query"
 import { NumericFormat } from 'react-number-format';
 import imgedit from '../../../assets/img/edit.png';
 import imgdelete from '../../../assets/img/delete.png';
 import svgload from '../../../assets/img/load.svg'
 
 const ListDetail = ({ hapusDetail, onClickEdit }) => {
-  const { data, loading, error } = useQuery(GetOrders);
+  const { data, loading, error } = useSubscription(subscriptionOrder);
 
   if (loading) {
     return <img src={svgload} alt="load" className='warn'/>;
