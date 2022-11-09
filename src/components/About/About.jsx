@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logobw from "../../img/logobw.png"
-import bgabout from "../../img/bgabout.jpg"
+import logobw from "../../assets/img/logobw.png"
+import bgabout from "../../assets/img/bgabout.jpg"
 import "./About.css"
 import Footer from '../Footer/Footer'
 

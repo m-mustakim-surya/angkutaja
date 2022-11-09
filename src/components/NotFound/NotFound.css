@@ -1,0 +1,33 @@
+.notFound {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.notFound h2 {
+    font-size: 80px;
+    margin-bottom: 90px;
+}
+
+.notFound h3 {
+    position: relative;
+    top: -70px;
+}
+
+.notFoundDesc p {
+    width: 300px;
+    margin: -40px auto 20px;
+}
+
+.goBack {
+    width: max-content;
+    height: 50px;
+    border: 0;
+    padding: 0 15px;
+    border-radius: 25px;
+    background-color: rgb(231, 231, 231);
+}
+
+.textGoBack {
+    text-decoration: none;
+    color: black;
+}
