@@ -1,3 +1,7 @@
+.order {
+    margin-top: 185px;
+}
+
 h1 {
     font-family: 'Maison Neue Extended';
     font-size: 30px;
@@ -69,8 +73,10 @@ textarea {
     right: 30px;
     font-size: 15px;
     cursor: pointer;
+    border: #ececec solid 2px;
 }
 
 .buttonSubmit:hover {
     background-color: #e9ac1f;
+    transition: 0.3s;
 }

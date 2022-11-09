@@ -1,7 +1,8 @@
-import { useState } from "react"
-import { createOrder, GetOrders } from "../../../config/query"
-import { useMutation } from "@apollo/client"
-import orderimg from '../../../img/order2.PNG'
+import { useState } from "react";
+import { createOrder, GetOrders } from "../../../config/query";
+import { useMutation } from "@apollo/client";
+import orderimg from '../../../assets/img/order2.PNG';
+import Swal from "sweetalert2";
 
 function InputOrder(props) {
   const [insertOrder] = useMutation(createOrder, { refetchQueries: [{ query: GetOrders }] })
@@ -64,23 +65,18 @@ function InputOrder(props) {
         alamat_jemput: "",
         alamat_tujuan: "",
       })
+      Swal.fire(
+        'Submitted',
+        'Order pengangkutan berhasil dikirim!',
+        'success'
+      )
     } else {
-      alert("Lengkapi data terlebih dahulu!")
+      Swal.fire(
+        'Incomplete',
+        'Lengkapi seluruh data terlebih dahulu sebelum melakukan submit!',
+        'warning'
+      )
     }
-  }
-
-  const handleBukaInput = () => {
-    setState({
-      ...state,
-      inputing: false,
-    })
-  }
-
-  const handleTutupInput = () => {
-    setState({
-      ...state,
-      inputing: true,
-    })
   }
 
   return (

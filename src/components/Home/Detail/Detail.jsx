@@ -1,42 +1,55 @@
 import { useMutation } from "@apollo/client"
-import { createOrder, deleteOrderById, GetOrders, updateOrderById } from "../../../config/query";
+import { deleteOrderById, GetOrders, updateOrderById } from "../../../config/query";
 import { useState } from "react";
-import Footer from '../../Footer/Footer';
 import Navbar from '../../Navbar/Navbar';
 import ListDetail from './ListDetail';
 import UpdateDetail from './UpdateDetail';
+import Swal from "sweetalert2";
 import './Detail.css';
 
 const Detail = () => {
-  const [insertDetail] = useMutation(createOrder, { refetchQueries: [{ query: GetOrders }] })
   const [deleteDetail] = useMutation(deleteOrderById, { refetchQueries: [{ query: GetOrders }] })
   const [updateDetail] = useMutation(updateOrderById, { refetchQueries: [{ query: GetOrders }] })
 
   const removeDetail = order_ids => {
-    deleteDetail({
-      variables: {
-        order_id: order_ids,
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
       },
-    });
-  };
-
-  const tambahDetail = newUser => {
-    const newData = {
-      ...newUser,
-    };
-    insertDetail({
-      variables: {
-        user_name: newData.user_name,
-        user_telepon: newData.user_telepon,
-        waktu: newData.waktu,
-        jenis_angkut: newData.jenis_angkut,
-        jenis_mobil: newData.jenis_mobil,
-        alamat_jemput: newData.alamat_jemput,
-        alamat_tujuan: newData.alamat_tujuan,
-        jarak: newData.jarak,
-        harga: newData.harga
-      },
-    });
+      buttonsStyling: true
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Anda yakin?',
+      text: "Order pengangkutan yang terhapus tidak bisa dikembalikan",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Delete',
+      cancelButtonText: 'Cancel',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteDetail({
+          variables: {
+            order_id: order_ids,
+          },
+        });
+        swalWithBootstrapButtons.fire(
+          'Deleted',
+          'Order pengangkutan yang dipilih telah terhapus!',
+          'success'
+        )
+      } else if (
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelled',
+          'Penghapusan order pengangkutan dibatalkan',
+          'error'
+        )
+      }
+    })
   };
 
   const [edit, setEdit] = useState({
@@ -99,7 +112,6 @@ const Detail = () => {
         onClickEdit={onClickEdit}
       />
       <UpdateDetail  edit={edit} editDetail={editDetail} />
-      {/* <Footer /> */}
     </div>
   )
 }
