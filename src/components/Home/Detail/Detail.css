@@ -168,6 +168,43 @@ select {
     margin-top: 7px;
 }
 
+.editOrder .tabInput {
+    display: flex;
+}
+
+.editOrder .tab1 {
+    margin-right: 60px;
+}
+
+.editOrder input[type="text"],
+.editOrder input[type="date"],
+.editOrder select {
+    display: block;
+    border-radius: 15px;
+    height: 35px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: solid black 1px;
+    padding: 0 10px;
+}
+
+.editOrder select {
+    height: 42px;
+}
+
+.editOrder textarea {
+    height: 80px;
+    width: 300px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: solid black 1px;
+    border-radius: 20px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
 @media (max-width:425px) {
     .detail {
         margin-left: 10px;
@@ -262,7 +299,7 @@ select {
     }
 
     .buttonSave {
-        width: 120px;
+        width: 70px;
         height: 30px;
         border: 0;
         border-radius: 10px;
@@ -278,7 +315,7 @@ select {
     }
 
     .buttonCancel {
-        width: 120px;
+        width: 70px;
         height: 30px;
         border: 0;
         border-radius: 10px;
@@ -302,8 +339,8 @@ select {
         background-color: white;
         top: 10%;
         bottom: 10%;
-        left: 25%;
-        right: 25%;
+        left: 5%;
+        right: 5%;
         padding: 30px;
         z-index: 9;
     }
@@ -319,6 +356,48 @@ select {
     }
 
     .titleEdit {
-        margin-top: 7px;
+        margin-top: 0;
+    }
+
+    .editOrder .tabInput {
+        display: flex;
+    }
+
+    .editOrder .tab1 {
+        margin-right: 10px;
+    }
+
+    .editOrder label {
+        font-size: 12px;
+    }
+
+    .editOrder input[type="text"],
+    .editOrder input[type="date"],
+    .editOrder input[type="number"],
+    .editOrder select {
+        display: block;
+        border-radius: 15px;
+        height: 35px;
+        width: 135px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: solid black 1px;
+        padding: 0 10px;
+    }
+
+    .editOrder select {
+        height: 42px;
+    }
+
+    .editOrder textarea {
+        height: 80px;
+        width: 150px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: solid black 1px;
+        border-radius: 20px;
+        padding: 10px 10px;
+        box-sizing: border-box;
     }
 }
